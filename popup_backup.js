@@ -1,33 +1,11 @@
-// document.getElementById('generate').addEventListener('click', () => {
-//     const requestData = {
-//         model: "llama3.2",
-//         prompt: "Why is the sky blue?"
-//     };
-
-//     fetch('http://172.20.2.243:11434/api/generate', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(requestData)
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         if (data.response) {
-//             alert(`后端返回的消息: ${data.response}`);
-//         } else {
-//             alert('后端未返回有效的 response 字段');
-//         }
-//     })
-//     .catch(error => console.error('请求错误:', error));
-// });
-
+//This is a backup file for popup.js
+//for OpenAI GPT-4o-mini API
 
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("sendRequest");
   if (button) {
     button.addEventListener("click", async () => {
-      const apiKey = ""; // 替换为你的 API Key
+      const apiKey = ""; // replace with your OpenAI API key
       const url = "https://api.openai.com/v1/chat/completions";
 
       const data = {
@@ -56,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const result = await response.json();
-        // 提取 content 值
+        // get the content value
         const content = result.choices[0].message.content;
         console.log("Response Content:", content);
-        alert(content); // 显示 content 值
+        alert(content); // show the content value
       } catch (error) {
         console.error("Error:", error);
         alert("Failed to send POST request.");
