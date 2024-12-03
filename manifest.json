@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Simple POST Request Extension",
+  "version": "1.0",
+  "description": "Sends a POST request to a specified API when the button is clicked.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://test.riyti1xhl.nyat.app:19007/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
